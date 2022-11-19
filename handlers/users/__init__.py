@@ -1,3 +1,4 @@
+from . import tasdiq
 from . import tarifOddiy
 from . import menu
 from . import help
