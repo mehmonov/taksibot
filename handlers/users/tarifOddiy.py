@@ -5,6 +5,7 @@ from keyboards.default.buyurtma import buyurtma
 from aiogram.dispatcher import FSMContext
 from aiogram.types import ReplyKeyboardRemove
 from states.buyurtmaState import buyurtma
+from keyboards.default.tasdiq import tasdiq
 from loader import dp
 
 @dp.message_handler(text='🚕 Oddiy')
@@ -37,13 +38,10 @@ async def answer_hudud(message: types.Message, state: FSMContext):
     hudud = data.get("hudud")
    
     msg = "Buyurtmani tasdiqlaysizmi?\n"
-    
     msg += f"🛵 Tarif -<b> Oddiy </b>\n\n"
     msg += f"🏠 Manzil:  -<b> {manzil}</b>\n\n"
     msg += f"🚩 Hudud: -<b> {hudud}</b>\n\n"
     
-    await message.answer(msg)
-
-
+    await message.answer(msg,reply_markup=tasdiq)
     # await PersonalData.email.set()
     await  state.finish()
