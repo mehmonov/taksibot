@@ -7,7 +7,7 @@ from aiogram.types import ReplyKeyboardRemove
 from states.buyurtmaState import buyurtma
 from loader import dp
 
-@dp.message_handler(text='🚖 Buyurtma')
+@dp.message_handler(text='🚕 Oddiy')
 async def bot_start(message: types.Message):
     await message.answer("Manzilni kiriting 👇", reply_markup=ReplyKeyboardRemove())
     await buyurtma.fullName.set()
