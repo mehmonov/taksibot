@@ -38,9 +38,9 @@ async def answer_hudud(message: types.Message, state: FSMContext):
    
     msg = "Buyurtmani tasdiqlaysizmi?\n"
     
-    msg += f"🛵 Tarif -<b> Oddiy </b>\n"
-    msg += f"🏠 Manzil:  -<b> {manzil}</b>\n"
-    msg += f"🚩 Hudud: -<b> {hudud}</b>\n"
+    msg += f"🛵 Tarif -<b> Oddiy </b>\n\n"
+    msg += f"🏠 Manzil:  -<b> {manzil}</b>\n\n"
+    msg += f"🚩 Hudud: -<b> {hudud}</b>\n\n"
     
     await message.answer(msg)
 
