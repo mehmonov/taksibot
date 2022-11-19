@@ -36,9 +36,11 @@ async def answer_hudud(message: types.Message, state: FSMContext):
     manzil = data.get("manzil")
     hudud = data.get("hudud")
    
-    msg = "Quyidagi ma`lumotlar qabul qilindi:\n"
-    msg += f"Manzil -<b> {manzil}</b>\n"
-    msg += f"Manzil -<b> {hudud}</b>\n"
+    msg = "Buyurtmani tasdiqlaysizmi?\n"
+    
+    msg += f"🛵 Tarif -<b> Oddiy </b>\n"
+    msg += f"🏠 Manzil:  -<b> {manzil}</b>\n"
+    msg += f"🚩 Hudud: -<b> {hudud}</b>\n"
     
     await message.answer(msg)
 
