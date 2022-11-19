@@ -1,6 +1,8 @@
 from environs import Env
 import os
+
 # environs kutubxonasidan foydalanish
+
 env = Env()
 env.read_env()
 
